@@ -23,6 +23,8 @@ Este repositório é uma fonte central de informações sobre a Revisão de Esco
 - [Revisão de Escopo da Literatura Sobre Detecção de Deepfake](#revisão-de-escopo-da-literatura-sobre-detecção-de-deepfake)
   - [Guia das Seções](#guia-das-seções)
   - [Ferramentas](#ferramentas)
+    - [DeepfakeLab](#deepfakelab)
+    - [OpenKYC](#openkyc)
   - [Compilado](#compilado)
     - [Repositório Contribuintes](#repositório-contribuintes)
     - [Modelos Disponibilizados](#modelos-disponibilizados)
@@ -32,10 +34,35 @@ Este repositório é uma fonte central de informações sobre a Revisão de Esco
 
 ## Ferramentas
 
+https://github.com/topics/deepfakes
+
+### DeepfakeLab
+
+O DeepFaceLab é um software usado para criar deepfakes, especialmente para troca de rostos. Ele foi desenvolvido para ser fácil de usar, oferecendo ferramentas poderosas para criar deepfakes de alta qualidade. Uma das vantagens é que ele permite aos usuários personalizar o processo de criação sem precisar escrever muito código. Além disso, o DeepFaceLab pode produzir resultados com qualidade de cinema, superando outros métodos de troca de rostos. Em resumo, é uma ferramenta útil para criar deepfakes de forma simples e eficaz
+- article: [DeepFaceLab: Integrated, flexible and extensible face-swapping framework](https://arxiv.org/abs/2005.05535)
+- repo: [DeepFaceLab](https://github.com/iperov/DeepFaceLab?tab=readme-ov-file)
+
+### OpenKYC
+
+- repo: [OpenKYC](https://github.com/FaceOnLive/OpenKYC)
+
 ## Compilado
 Compilado de informações que podem ser pertinentes para esse projeto.
 
 ### Repositório Contribuintes
+- https://github.com/ControlNet/LAV-DF
+- https://github.com/davide-coccomini/MINTIME-Multi-Identity-size-iNvariant-TIMEsformer-for-Video-Deepfake-Detection
+- https://github.com/naveed88375/AI-ML
+- https://github.com/flyingby/Awesome-Deepfake-Generation-and-Detection
+- https://github.com/datamllab/awesome-deepfakes-materials
+- https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning
+- https://github.com/enochkan/awesome-gans-and-deepfakes
+- https://github.com/FurkanGozukara/Stable-Diffusion
+- https://github.com/aerophile/awesome-deepfakes
+- https://github.com/dream80/DeepFaceLab_Colab
+- https://github.com/Daisy-Zhang/Awesome-Deepfakes-Detection
+- https://github.com/EndlessSora/DeeperForensics-1.0
+- https://github.com/dessa-oss/DeepFake-Detection
 
 ### Modelos Disponibilizados
 
