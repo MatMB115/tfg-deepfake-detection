@@ -25,10 +25,13 @@ Este repositório é uma fonte central de informações sobre a Revisão de Esco
   - [Ferramentas](#ferramentas)
     - [DeepfakeLab](#deepfakelab)
     - [OpenKYC](#openkyc)
+    - [Visual DeepFake Detection](#visual-deepfake-detection)
   - [Compilado](#compilado)
-    - [Repositório Contribuintes](#repositório-contribuintes)
+    - [Repositório de Compilado de Tecnologias de Deepfake](#repositório-de-compilado-de-tecnologias-de-deepfake)
+    - [Benchmarks](#benchmarks)
     - [Modelos Disponibilizados](#modelos-disponibilizados)
     - [Modelos Testados](#modelos-testados)
+    - [Datasets](#datasets)
   - [Sobre mim](#sobre-mim)
   - [Contribuidores](#contribuidores)
 
@@ -42,31 +45,42 @@ O DeepFaceLab é um software usado para criar deepfakes, especialmente para troc
 - article: [DeepFaceLab: Integrated, flexible and extensible face-swapping framework](https://arxiv.org/abs/2005.05535)
 - repo: [DeepFaceLab](https://github.com/iperov/DeepFaceLab?tab=readme-ov-file)
 
+Encontrei uma tentativa de rodar uma versão limitado do DFL com um colab:
+- https://github.com/dream80/DeepFaceLab_Colab
+
 ### OpenKYC
 
 - repo: [OpenKYC](https://github.com/FaceOnLive/OpenKYC)
 
+### Visual DeepFake Detection
+Permite a vizualização do comportamento da rede durante o treinamento e predição de deepfakes.
+- repo: https://github.com/dessa-oss/DeepFake-Detection
+
 ## Compilado
 Compilado de informações que podem ser pertinentes para esse projeto.
 
-### Repositório Contribuintes
-- https://github.com/ControlNet/LAV-DF
-- https://github.com/davide-coccomini/MINTIME-Multi-Identity-size-iNvariant-TIMEsformer-for-Video-Deepfake-Detection
+### Repositório de Compilado de Tecnologias de Deepfake
+
 - https://github.com/naveed88375/AI-ML
-- https://github.com/flyingby/Awesome-Deepfake-Generation-and-Detection
 - https://github.com/datamllab/awesome-deepfakes-materials
-- https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning
 - https://github.com/enochkan/awesome-gans-and-deepfakes
-- https://github.com/FurkanGozukara/Stable-Diffusion
 - https://github.com/aerophile/awesome-deepfakes
-- https://github.com/dream80/DeepFaceLab_Colab
 - https://github.com/Daisy-Zhang/Awesome-Deepfakes-Detection
-- https://github.com/EndlessSora/DeeperForensics-1.0
-- https://github.com/dessa-oss/DeepFake-Detection
+
+### Benchmarks
+- https://github.com/flyingby/Awesome-Deepfake-Generation-and-Detection
 
 ### Modelos Disponibilizados
+- https://github.com/ControlNet/LAV-DF
+- https://github.com/davide-coccomini/MINTIME-Multi-Identity-size-iNvariant-TIMEsformer-for-Video-Deepfake-Detection
+- https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning
+- https://github.com/FurkanGozukara/Stable-Diffusion
 
 ### Modelos Testados
+
+### Datasets
+- https://github.com/Daisy-Zhang/Awesome-Deepfakes
+- https://github.com/EndlessSora/DeeperForensics-1.0
 
 ## Sobre mim
 Olá! Sou um estudante de Ciência da Computação na Universidade Federal de Itajubá, com foco em estudar redes neurais profundas. Tenho experiência com algumas tecnologias que estão listadas no meu [perfil](https://github.com/MatMB115). Atualmente trabalho como desenvolvedor Fullstack na [Exati Tecnologia](https://exati.com.br/). Estou sempre em busca de desafios que me permitam crescer e colaborar em equipe.
