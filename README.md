@@ -26,6 +26,7 @@ Este repositório é uma fonte central de informações sobre a Revisão de Esco
     - [DeepfakeLab](#deepfakelab)
     - [OpenKYC](#openkyc)
     - [Visual DeepFake Detection](#visual-deepfake-detection)
+    - [Keras](#keras)
   - [Compilado](#compilado)
     - [Repositório de Compilado de Tecnologias de Deepfake](#repositório-de-compilado-de-tecnologias-de-deepfake)
     - [Benchmarks](#benchmarks)
@@ -56,6 +57,11 @@ Encontrei uma tentativa de rodar uma versão limitado do DFL com um colab:
 Permite a vizualização do comportamento da rede durante o treinamento e predição de deepfakes.
 - repo: https://github.com/dessa-oss/DeepFake-Detection
 
+### Keras
+Keras Applications are deep learning models that are made available alongside pre-trained weights. These models can be used for prediction, feature extraction, and fine-tuning.
+- https://keras.io/api/applications/
+- https://www.kaggle.com/c/deepfake-detection-challenge/overview
+
 ## Compilado
 Compilado de informações que podem ser pertinentes para esse projeto.
 
@@ -77,7 +83,9 @@ Compilado de informações que podem ser pertinentes para esse projeto.
 - https://github.com/FurkanGozukara/Stable-Diffusion
 
 ### Modelos Testados
-
+- https://github.com/HongguLiu/Deepfake-Detection - Funcional com modelo já treinado (3 modelos) - Base é o Faceforensis++
+- https://github.com/erprogs/GenConViT -  Funcional com dois modelos já treinados
+  
 ### Datasets
 - https://github.com/Daisy-Zhang/Awesome-Deepfakes
 - https://github.com/EndlessSora/DeeperForensics-1.0
