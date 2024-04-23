@@ -99,7 +99,7 @@ def predict_with_model(image, model, post_function=nn.Softmax(dim=1),
 
     # Cast to desired
     _, prediction = torch.max(output, 1)    # argmax
-    prediction = float(prediction.cpu().numpy())
+    prediction = float(prediction.cpu().numpy().item())
 
     return int(prediction), output
 
@@ -123,9 +123,9 @@ def test_full_image_network(video_path, model_path, output_path,
     # Read and write
     reader = cv2.VideoCapture(video_path)
 
-    video_fn = video_path.split('/')[-1].split('.')[0]+'.avi'
+    video_fn = video_path.split('/')[-1].split('.')[0]+'.mp4'
     os.makedirs(output_path, exist_ok=True)
-    fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+    fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
     fps = reader.get(cv2.CAP_PROP_FPS)
     num_frames = int(reader.get(cv2.CAP_PROP_FRAME_COUNT))
     writer = None
@@ -135,8 +135,8 @@ def test_full_image_network(video_path, model_path, output_path,
 
     # Load model
     model = model_selection(modelname='xception', num_out_classes=2, dropout=0.5)
-    model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
-    
+    model.load_state_dict(torch.load(model_path))
+
     if isinstance(model, torch.nn.DataParallel):
         model = model.module
     if cuda:
@@ -145,7 +145,7 @@ def test_full_image_network(video_path, model_path, output_path,
     # Text variables
     font_face = cv2.FONT_HERSHEY_SIMPLEX
     thickness = 2
-    font_scale = 1
+    font_scale = 0.5
 
     # Frame numbers and length of output video
     frame_num = 0
@@ -206,8 +206,8 @@ def test_full_image_network(video_path, model_path, output_path,
         if frame_num >= end_frame:
             break
 
-        # Show
-        cv2.imshow('test', image)
+        # Show frames - in colab is disable
+        #cv2.imshow('test', image)
         cv2.waitKey(33)     # About 30 fps
         writer.write(image)
     pbar.close()
