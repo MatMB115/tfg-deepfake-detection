@@ -24,7 +24,9 @@ Este repositório é uma fonte central de informações sobre a Revisão de Esco
   - [Guia das Seções](#guia-das-seções)
   - [Ferramentas](#ferramentas)
     - [DeepfakeLab](#deepfakelab)
-    - [OpenKYC](#openkyc)
+    - [Face-recognicion](#face-recognicion)
+    - [MediaPipe](#mediapipe)
+    - [DeepFace](#deepface)
     - [Visual DeepFake Detection](#visual-deepfake-detection)
     - [Keras](#keras)
   - [Compilado](#compilado)
@@ -49,9 +51,18 @@ O DeepFaceLab é um software usado para criar deepfakes, especialmente para troc
 Encontrei uma tentativa de rodar uma versão limitado do DFL com um colab:
 - https://github.com/dream80/DeepFaceLab_Colab
 
-### OpenKYC
+### Face-recognicion
+- Reconheça e manipule rostos em Python ou na linha de comando com a biblioteca de reconhecimento facial mais simples do mundo.
+- repo: https://github.com/ageitgey/face_recognition
 
-- repo: [OpenKYC](https://github.com/FaceOnLive/OpenKYC)
+### MediaPipe
+- MediaPipe Solutions fornece um conjunto de bibliotecas e ferramentas para você aplicar rapidamente técnicas de inteligência artificial (IA) e aprendizado de máquina (ML) em seus aplicativos. Você pode conectar essas soluções aos seus aplicativos imediatamente, personalizá-las de acordo com suas necessidades e usá-las em diversas plataformas de desenvolvimento. MediaPipe Solutions faz parte do projeto de código aberto MediaPipe, então você pode personalizar ainda mais o código da solução para atender às necessidades do seu aplicativo.
+- repo: https://github.com/google-ai-edge/mediapipe
+
+### DeepFace
+![DeepFace](https://raw.githubusercontent.com/serengil/deepface/master/icon/model-portfolio-20240316.jpg)
+- Deepface é uma estrutura leve de reconhecimento facial e análise de atributos faciais (idade, gênero, emoção e raça) para python.  É uma estrutura híbrida de reconhecimento facial que envolve modelos de última geração: VGG-Face, FaceNet, OpenFace, DeepFace, DeepID, ArcFace, Dlib, SFace e GhostFaceNet.
+- https://github.com/serengil/deepface
 
 ### Visual DeepFake Detection
 Permite a vizualização do comportamento da rede durante o treinamento e predição de deepfakes.
