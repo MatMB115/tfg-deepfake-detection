@@ -29,8 +29,7 @@ Este repositório é uma fonte central de informações sobre a revisão da lite
     - [DeepFace](#deepface)
     - [Keras](#keras)
   - [Material Analisado](#material-analisado)
-    - [Repositório de Compilado de Tecnologias de Deepfake](#repositório-de-compilado-de-tecnologias-de-deepfake)
-    - [Benchmarks](#benchmarks)
+    - [Repositório com Compilados de Publicações](#repositório-com-compilados-de-publicações)
     - [Modelos](#modelos)
     - [Datasets](#datasets)
       - [FaceForensics++](#faceforensics)
@@ -46,9 +45,7 @@ https://github.com/topics/deepfakes
 O DeepFaceLab é um software usado para criar deepfakes, especialmente para troca de rostos. Ele foi desenvolvido para ser fácil de usar, oferecendo ferramentas poderosas para criar deepfakes de alta qualidade.
 - article: [DeepFaceLab: Integrated, flexible and extensible face-swapping framework](https://arxiv.org/abs/2005.05535)
 - repo: [DeepFaceLab](https://github.com/iperov/DeepFaceLab?tab=readme-ov-file)
-
-Encontrei uma tentativa de rodar uma versão limitado do DFL com um colab:
-- https://github.com/dream80/DeepFaceLab_Colab
+- colab: https://github.com/dream80/DeepFaceLab_Colab
 
 ### Face-recognicion
 Reconheça e manipule rostos em Python ou na linha de comando com a biblioteca de reconhecimento facial mais simples do mundo. Utilizado como backend na maioria dos modelos que faz análise da face.
@@ -72,27 +69,25 @@ Keras Applications are deep learning models that are made available alongside pr
 ## Material Analisado
 Compilado de informações que podem ser pertinentes para esse projeto.
 
-### Repositório de Compilado de Tecnologias de Deepfake
-
-- https://github.com/naveed88375/AI-ML
-- https://github.com/datamllab/awesome-deepfakes-materials
-- https://github.com/enochkan/awesome-gans-and-deepfakes
-- https://github.com/aerophile/awesome-deepfakes
-- https://github.com/Daisy-Zhang/Awesome-Deepfakes-Detection
-
-### Benchmarks
-- https://github.com/flyingby/Awesome-Deepfake-Generation-and-Detection
+### Repositório com Compilados de Publicações
+- https://github.com/flyingby/Awesome-Deepfake-Generation-and-Detection - Abrangente
+- https://github.com/Daisy-Zhang/Awesome-Deepfakes-Detection - Direcionado
 
 ### Modelos
-- https://github.com/HongguLiu/Deepfake-Detection - Funcional com modelo já treinado (3 modelos) e base é o Faceforensis++;
+- https://github.com/HongguLiu/Deepfake-Detection - Xception como backbone, funcional com modelo já treinado (3 modelos) e base é o Faceforensis++;
 - https://github.com/erprogs/GenConViT -  Funcional com dois modelos (Encoder/Decoder e VAE) já treinados;
-- https://github.com/polimi-ispl/icpr2020dfdc - modelo mais simples combinando CNNs, há modelos treinados para teste;
-- https://github.com/skrantidatta/LIPINC - modelo baseado em inconsistência labiais para detectar deepfakes, ainda não testado;
+- https://github.com/polimi-ispl/icpr2020dfdc - modelo mais simples e velho, combina CNNs, há diversos modelos treinados para teste;
+- https://github.com/skrantidatta/LIPINC - modelo baseado em inconsistência labiais para detectar deepfakes;
+- https://github.com/AaronComo/LipFD - também baseado em inconsistências labiais - permite apenas validação.
 
   
 ### Datasets
-- https://github.com/Daisy-Zhang/Awesome-Deepfakes
-- https://github.com/EndlessSora/DeeperForensics-1.0
+- [Deepfake-TIMIT](Deepfake-TIMIT)
+- Celeb-DF (v1 & v2)
+- [FakeAVCeleb](https://github.com/DASH-Lab/FakeAVCeleb)
+- [FaceForensic++](https://github.com/ondyari/FaceForensics)
+- [DFDC](https://www.kaggle.com/c/deepfake-detection-challenge/data)
+- [DFFD]()
 #### FaceForensics++
 [FaceForensics++](https://github.com/ondyari/FaceForensics) é um conjunto de dados forenses composto por 1000 sequências de vídeo originais que foram manipuladas com quatro métodos automatizados de manipulação facial: Deepfakes, Face2Face, FaceSwap e NeuralTextures. Os dados foram obtidos de 977 vídeos do YouTube, todos contendo rostos predominantemente frontais e sem obstruções, permitindo que os métodos automatizados criem falsificações realistas. Além disso, o conjunto de dados inclui máscaras binárias, permitindo seu uso tanto para classificação de imagens e vídeos quanto para segmentação. Também são fornecidos 1000 modelos Deepfakes para gerar e aumentar novos dados.
 #### DeepfakeTIMIT
