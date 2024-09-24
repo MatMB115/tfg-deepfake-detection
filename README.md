@@ -32,8 +32,6 @@ Este repositório é uma fonte central de informações sobre a revisão da lite
     - [Repositório com Compilados de Publicações](#repositório-com-compilados-de-publicações)
     - [Modelos](#modelos)
     - [Datasets](#datasets)
-      - [FaceForensics++](#faceforensics)
-      - [DeepfakeTIMIT](#deepfaketimit)
   - [Sobre mim](#sobre-mim)
 
 ## Ferramentas
@@ -43,7 +41,7 @@ https://github.com/topics/deepfakes
 ### DeepfakeLab
 
 O DeepFaceLab é um software usado para criar deepfakes, especialmente para troca de rostos. Ele foi desenvolvido para ser fácil de usar, oferecendo ferramentas poderosas para criar deepfakes de alta qualidade.
-- article: [DeepFaceLab: Integrated, flexible and extensible face-swapping framework](https://arxiv.org/abs/2005.05535)
+- paper: [DeepFaceLab: Integrated, flexible and extensible face-swapping framework](https://arxiv.org/abs/2005.05535)
 - repo: [DeepFaceLab](https://github.com/iperov/DeepFaceLab?tab=readme-ov-file)
 - colab: https://github.com/dream80/DeepFaceLab_Colab
 
@@ -72,26 +70,30 @@ Compilado de informações que podem ser pertinentes para esse projeto.
 ### Repositório com Compilados de Publicações
 - https://github.com/flyingby/Awesome-Deepfake-Generation-and-Detection - Abrangente
 - https://github.com/Daisy-Zhang/Awesome-Deepfakes-Detection - Direcionado
+- https://github.com/SCLBD/DeepfakeBench - Benchmark feito com 15 modelos (estado da arte) e 9 datasets (6 pós-processamento)
 
 ### Modelos
-- https://github.com/HongguLiu/Deepfake-Detection - Xception como backbone, funcional com modelo já treinado (3 modelos) e base é o Faceforensis++;
-- https://github.com/erprogs/GenConViT -  Funcional com dois modelos (Encoder/Decoder e VAE) já treinados;
-- https://github.com/polimi-ispl/icpr2020dfdc - modelo mais simples e velho, combina CNNs, há diversos modelos treinados para teste;
-- https://github.com/skrantidatta/LIPINC - modelo baseado em inconsistência labiais para detectar deepfakes;
-- https://github.com/AaronComo/LipFD - também baseado em inconsistências labiais - permite apenas validação.
+| Repositório                                                    | Backbone / Arquitetura                          | Descrição                                                                                                                   | Links Relevantes                                                                                                                                                     |
+|----------------------------------------------------------------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [XceptionNet](https://github.com/HongguLiu/Deepfake-Detection) | XceptionNet                                    | Utiliza XceptionNet para detectar deepfakes, focando na extração de características de imagens. Treinado com FaceForensics++. | [GitHub](https://github.com/HongguLiu/Deepfake-Detection)                                                                                                           |
+| [GenConViT](https://github.com/erprogs/GenConViT)              | ConvNext, SwinTransformer                      | Modelos baseados em Autoencoder e VAE com backbones ConvNext e SwinTransformer, voltados para análise de vídeo.              | [GitHub](https://github.com/erprogs/GenConViT)                                                                                                                     |
+| [icpr2020dfdc](https://github.com/polimi-ispl/icpr2020dfdc)    | CNNs                                           | Combina diferentes CNNs para detecção de deepfakes, com diversos modelos pré-treinados disponíveis para teste.               | [GitHub](https://github.com/polimi-ispl/icpr2020dfdc)                                                                                                              |
+| [LIPINC](https://github.com/skrantidatta/LIPINC)               | MSTIE (Mouth Spatial-Temporal Inconsistency Extractor)                                | Detecta deepfakes de sincronização labial ao identificar inconsistências temporais nos movimentos labiais entre frames.       | [GitHub](https://github.com/skrantidatta/LIPINC)                                                                                                                    |
+| [LipFD](https://github.com/AaronComo/LipFD)                    | ViT-L/14 (Vision Transformer)                  | Foca na detecção de deepfakes de sincronização labial, usando inconsistências temporais entre áudio e vídeo.                 | [GitHub](https://github.com/AaronComo/LipFD)                                                                                                                       |
 
-  
 ### Datasets
-- [Deepfake-TIMIT](Deepfake-TIMIT)
-- Celeb-DF (v1 & v2)
-- [FakeAVCeleb](https://github.com/DASH-Lab/FakeAVCeleb)
-- [FaceForensic++](https://github.com/ondyari/FaceForensics)
-- [DFDC](https://www.kaggle.com/c/deepfake-detection-challenge/data)
-- [DFFD]()
-#### FaceForensics++
-[FaceForensics++](https://github.com/ondyari/FaceForensics) é um conjunto de dados forenses composto por 1000 sequências de vídeo originais que foram manipuladas com quatro métodos automatizados de manipulação facial: Deepfakes, Face2Face, FaceSwap e NeuralTextures. Os dados foram obtidos de 977 vídeos do YouTube, todos contendo rostos predominantemente frontais e sem obstruções, permitindo que os métodos automatizados criem falsificações realistas. Além disso, o conjunto de dados inclui máscaras binárias, permitindo seu uso tanto para classificação de imagens e vídeos quanto para segmentação. Também são fornecidos 1000 modelos Deepfakes para gerar e aumentar novos dados.
-#### DeepfakeTIMIT
-[DeepfakeTIMIT](https://zenodo.org/records/4068245) é um banco de dados de vídeos onde rostos foram trocados usando uma abordagem baseada em GAN de código aberto. O banco de dados foi criado a partir de 16 pares de pessoas com aparências semelhantes selecionadas do VidTIMIT, um banco de dados público. Foram treinados dois modelos diferentes para cada um dos 32 indivíduos: um de qualidade inferior (64 x 64 pixels) e outro de qualidade superior (128 x 128 pixels). Com 10 vídeos por pessoa no VidTIMIT, foram gerados 320 vídeos para cada versão, totalizando 620 vídeos com rostos trocados. O áudio original dos vídeos foi mantido sem manipulações.
+
+| Dataset          | Ano  | Paper                                                                                                              | Download Link                                                                                                    |
+|------------------|------|--------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Deepfake-TIMIT   | 2018 | [paper](https://arxiv.org/abs/2408.05366)                                                                           | [download](https://huggingface.co/datasets/faridlab/deepspeak_v1)                                                |
+| Celeb-DF (v1 & v2)| 2019 | [paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Li_Celeb-DF_A_Large-Scale_Challenging_Dataset_for_DeepFake_Forensics_CVPR_2020_paper.pdf)| [download](https://github.com/yuezunli/celeb-deepfakeforensics/tree/master/Celeb-DF-v2)                         |
+| FaceForensic++   | 2019 | [paper](https://arxiv.org/abs/1901.08971)                                                                           | [download](https://github.com/ondyari/FaceForensics)                                                             |
+| DFDC             | 2019 | [paper](https://arxiv.org/abs/2006.07397)                                                                           | [download](https://www.kaggle.com/c/deepfake-detection-challenge/data)                                            |
+| DFFD             | 2019 | [paper](http://cvlab.cse.msu.edu/pdfs/dang_liu_stehouwer_liu_jain_cvpr2020.pdf)                                     | [download](http://cvlab.cse.msu.edu/dffd-dataset.html)                                                           |
+| FakeAVCeleb      | 2021 | [paper](https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/d9d4f495e875a2e075a1a4a6e1b9770f-Paper-round2.pdf)| [download](https://github.com/DASH-Lab/FakeAVCeleb)                                                              |
+| ***WildDeepfake***| 2021 | [paper](https://arxiv.org/abs/2101.01456)                                                                           | [download](https://github.com/deepfakeinthewild/deepfake-in-the-wild)                                             |
+| ***DeepSpeak***   | 2024 | [paper](https://arxiv.org/abs/2408.05366)                                                                           | [download](https://huggingface.co/datasets/faridlab/deepspeak_v1)                                                |
+
 
 ## Sobre mim
 
