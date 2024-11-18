@@ -33,8 +33,10 @@ Este repositório é uma fonte central de informações sobre o trabalho desenvo
     - [Repositório com Compilados de Publicações](#repositório-com-compilados-de-publicações)
     - [Modelos Promissores](#modelos-promissores)
     - [Datasets](#datasets)
+  - [Requisitos](#requisitos)
   - [Pré-processamento](#pré-processamento)
   - [Ramificações](#ramificações)
+  - [Resultados](#resultados)
   - [Sobre mim](#sobre-mim)
 
 
@@ -131,6 +133,27 @@ Compilado de informações pertinentes para esse trabalho.
 A figura abaixo ilustra os tipos de amostras presentes em alguns dos datasets relevantes na literatura.
 ![Datasets](https://imgur.com/0p6sdEH.jpg)
 
+## Requisitos
+As etapas abaixo são necessárias para reproduzir o pré-processamento ou visualizar os resultados obtidos.
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/MatMB115/tfg-deepfake-detection
+cd tfg-deepfake-detection
+```
+
+1. Crie e ative um ambiente virtual Python:
+```bash
+python -m venv local
+source local/bin/activate  # Para Linux/MacOS
+# .\local\Scripts\Activate.ps1  # Para Windows PowerShell
+# .\local\Scripts\activate  # Para Windows Command Prompt
+```
+
+1. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
 ## Pré-processamento
 
 Os scripts de pré-processamento neste repositório são destinados principalmente para o modelo GenConViT. Para os modelos do Deepfakebenchmark, foi utilizado o pipeline de pré-processamento fornecido pelo próprio benchmark. Os conjuntos de dados utilizados são o ***DeepSpeak e o WildDeepfake***. A pasta `preprocessing/` contém subpastas específicas para cada dataset. Esses scripts garantem que os dados estejam prontos para serem utilizados nos experimentos com o GenConViT.
@@ -145,6 +168,9 @@ As principais modificações incluem:
 - Adição de suporte a novos datasets **(Ambos)**: O pipeline foi ajustado para permitir a integração e o processamento de novos conjuntos de dados, como DeepSpeak e WildDeepfake (apenas para o GenConViT).
 - Implementação de ajustes para predições **(GenConViT)**: modificações para permitir a predição utilizando datasets que contêm apenas imagens pré-processadas.
 - Funcionalidades para salvar dados de predição **(Ambos)**: salvar os dados de predição, permitindo uma análise posterior mais detalhada e organizada.
+
+## Resultados
+O script `result_all.py` é responsável por processar os JSONs e binários com as informações armazenadas das predições. Ao executá-lo, serão gerados os gráficos e tabelas que foram apresentados na monografia.
 
 ## Sobre mim
 
