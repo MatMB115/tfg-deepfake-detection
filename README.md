@@ -13,6 +13,7 @@
   </a>
 </p>
 
+![](https://imc.unifei.edu.br/wp-content/uploads/2021/07/horizontal2000x969-624x302-1.png)
 
 # Análise Comparativa de Modelos para Detecção de Deepfake
 
@@ -94,7 +95,7 @@ Deepface é uma estrutura leve de reconhecimento facial e análise de atributos 
 - repo: https://github.com/serengil/deepface
 
 ### Keras
-Keras Applications are deep learning models that are made available alongside pre-trained weights. These models can be used for prediction, feature extraction, and fine-tuning.
+Keras disponibiliza modelos de aprendizado profundo com pesos pré-treinados. Esses modelos podem ser usados ​​para previsão, extração de recursos e ajuste fino.
 - https://keras.io/api/applications/
 
 ## Material Analisado
@@ -172,6 +173,10 @@ As principais modificações incluem:
 ## Resultados
 O script `result_all.py` é responsável por processar os JSONs e binários com as informações armazenadas das predições. Ao executá-lo, serão gerados os gráficos e tabelas que foram apresentados na monografia.
 
+Os resultados podem ser expressos com gráficos:
+![ROC-exemplo](https://imgur.com/PJuFgr3.png)
+Também, podem ser exportados como tabelas:
+![Tabela-exemplo](https://imgur.com/THlLv6O.png)
 ## Sobre mim
 
 <table>
