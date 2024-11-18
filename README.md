@@ -13,7 +13,9 @@
   </a>
 </p>
 
-![](https://imc.unifei.edu.br/wp-content/uploads/2021/07/horizontal2000x969-624x302-1.png)
+<p align="center">
+  <img src="https://imgur.com/WtW9rQl.png" />
+</p>
 
 # Análise Comparativa de Modelos para Detecção de Deepfake
 
@@ -71,7 +73,7 @@ Este repositório é uma fonte central de informações sobre o trabalho desenvo
 
 ## Ferramentas
 
-https://github.com/topics/deepfakes
+Conjunto de ferramentas interessantes na área de deepfakes.
 
 ### DeepfakeLab
 
