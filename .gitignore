@@ -64,3 +64,6 @@ target/
 .python-version
 
 .idea/
+
+# Specific Directories
+result/assets/

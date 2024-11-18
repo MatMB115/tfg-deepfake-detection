@@ -1,0 +1,9 @@
+dlib==19.24.6
+matplotlib
+mediapipe
+numpy==1.26.4
+opencv-python
+pandas
+pillow
+scikit-learn
+tqdm

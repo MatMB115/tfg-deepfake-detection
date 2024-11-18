@@ -14,14 +14,15 @@
 </p>
 
 
-# Revisão da Literatura Sobre Detecção de Deepfake
+# Análise Comparativa de Modelos para Detecção de Deepfake
 
-Este repositório é uma fonte central de informações sobre a revisão da literatura sobre **Detecção de Deepfake**. Aqui, você encontrará uma compilação de recursos, incluindo artigos, relatórios e modelos de outros repositórios relevantes. O objetivo é fornecer uma referência única e acessível para pesquisadores e profissionais interessados na detecção de deepfakes e viabilizar a realização do TFG para graduação na Universidade Federal de Itajubá.
+Este repositório é uma fonte central de informações sobre o trabalho desenvolvido acerca da comparação de desempenho de novos modelos para **Detecção de Deepfake**. Aqui, você encontrará uma compilação de recursos, incluindo artigos, relatórios, modelos relevantes e scripts de pré-processamento. O objetivo é fornecer uma referência única e acessível aos interessados no trabalho desenvolvido na área de detecção de deepfakes e viabilizar a realização do Trabalho Final de Graduação (TFG) para graduação na Universidade Federal de Itajubá.
 
 
 ## Guia das Seções
-- [Revisão da Literatura Sobre Detecção de Deepfake](#revisão-da-literatura-sobre-detecção-de-deepfake)
+- [Análise Comparativa de Modelos para Detecção de Deepfake](#análise-comparativa-de-modelos-para-detecção-de-deepfake)
   - [Guia das Seções](#guia-das-seções)
+  - [Estrutura do Trabalho](#estrutura-do-trabalho)
   - [Ferramentas](#ferramentas)
     - [DeepfakeLab](#deepfakelab)
     - [Face-recognicion](#face-recognicion)
@@ -30,10 +31,40 @@ Este repositório é uma fonte central de informações sobre a revisão da lite
     - [Keras](#keras)
   - [Material Analisado](#material-analisado)
     - [Repositório com Compilados de Publicações](#repositório-com-compilados-de-publicações)
-    - [Modelos](#modelos)
+    - [Modelos Promissores](#modelos-promissores)
     - [Datasets](#datasets)
   - [Pré-processamento](#pré-processamento)
+  - [Ramificações](#ramificações)
   - [Sobre mim](#sobre-mim)
+
+
+## Estrutura do Trabalho
+
+    root/
+    ├── .gitignore                
+    ├── LICENSE                   
+    ├── README.md                 # Documentação do projeto
+    ├── preprocessing/            # Scripts de pré-processamento
+    │   ├── deepspeak/            # Scripts específicos para o dataset DeepSpeak
+    │   │   ├── create_batches.sh # Script para dividir vídeos em lotes
+    │   │   ├── preprocessing.py  # Script principal de pré-processamento do DeepSpeak
+    │   │   ├── sort_files.py     # Script para copiar arquivos selecionados (quantidade de frames)
+    │   │   ├── dataset.py        # Baixar os dados do dataset
+    │   └── mouth/                # Scripts para extração de bocas de vídeos (abordagem desconsiderada ao decorrer do trabalho)
+    │   │   ├── mouth_extrator.py 
+    │   │   ├── run.sh            
+    │   │   └── split_videos.bash 
+    │   └── wild_deepfake/        # Scripts específicos para o dataset WildDeepfake
+    │       ├── extract.py        # Script para copiar, reorganizar imagens e gerar metadados (json)
+    │       └── sort.py           # Script para copiar arquivos
+    ├── requirements.txt          # Dependências do projeto
+    └── result/                   # Resultados das predições em JSON e binário
+    │   ├── assets/               # Gráficos e tabelas gerados    
+    │   ├── original/             
+    │   ├── original_benchmark/   
+    │   ├── retrain/              
+    │   ├── retrain_benchmark/    
+    └── result_all.py         # Script para processar e analisar todos os resultados
 
 ## Ferramentas
 
@@ -63,23 +94,22 @@ Deepface é uma estrutura leve de reconhecimento facial e análise de atributos 
 ### Keras
 Keras Applications are deep learning models that are made available alongside pre-trained weights. These models can be used for prediction, feature extraction, and fine-tuning.
 - https://keras.io/api/applications/
-- https://www.kaggle.com/c/deepfake-detection-challenge/overview
 
 ## Material Analisado
-Compilado de informações que podem ser pertinentes para esse projeto.
+Compilado de informações pertinentes para esse trabalho.
 
 ### Repositório com Compilados de Publicações
 - https://github.com/flyingby/Awesome-Deepfake-Generation-and-Detection - Abrangente
 - https://github.com/Daisy-Zhang/Awesome-Deepfakes-Detection - Direcionado
-- https://github.com/SCLBD/DeepfakeBench - Benchmark feito com 15 modelos (estado da arte) e 9 datasets (6 pós-processamento)
+- https://github.com/SCLBD/DeepfakeBench - Benchmark feito com 15 modelos (estado da arte) e 9 datasets (resultando em 6 pós-processamento)
 
-### Modelos
+### Modelos Promissores
 | Status | Repositório                                                    | Backbone                                               | Descrição                                                                                                                                                                                                                            | Fonte                                                                                                    |  Implementação    |
 |--------|----------------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------|
 | ✅      | [XceptionNet](https://github.com/HongguLiu/Deepfake-Detection) | Xception                                               | Utiliza XceptionNet para detectar deepfakes, focando na extração de características de imagens. Treinado com FaceForensics++.                                                                                                        | [GitHub](https://github.com/SCLBD/DeepfakeBench/blob/main/training/detectors/xception_detector.py)       | DeepfakeBenchmark |
 | ✅      | [GenConViT](https://github.com/erprogs/GenConViT)              | ConvNext, SwinTransformer                              | Modelos baseados em Autoencoder e VAE com backbones ConvNext e SwinTransformer, voltados para análise de vídeo.                                                                                                                      | [GitHub](https://github.com/erprogs/GenConViT)                                                           | Original          |
 | ⭕      | [icpr2020dfdc](https://github.com/polimi-ispl/icpr2020dfdc)    | CNNs                                                   | Combina diferentes CNNs para detecção de deepfakes, com diversos modelos pré-treinados disponíveis para teste.                                                                                                                       | [GitHub](https://github.com/polimi-ispl/icpr2020dfdc)                                                    | Original          |
-| ⭕      | [LIPINC](https://github.com/skrantidatta/LIPINC)               | MSTIE (Mouth Spatial-Temporal Inconsistency Extractor) | Detecta deepfakes de sincronização labial ao identificar inconsistências temporais nos movimentos labiais entre frames.                                                                                                              | [GitHub](https://github.com/skrantidatta/LIPINC)                                                         | Original          |
+| ⭕      | [LIPINC](https://github.com/skrantidatta/LIPINC)               | MSTIE (Mouth Spatial-Temporal Inconsistency Extractor) | Detecta deepfakes de sincronização labial ao identificar inconsistências temporais nos movimentos labiais entre frames utilizando mecanismo de atenção.                                                                                                              | [GitHub](https://github.com/skrantidatta/LIPINC)                                                         | Original          |
 | ⭕      | [LipFD](https://github.com/AaronComo/LipFD)                    | ViT-L/14 (Vision Transformer)                          | Foca na detecção de deepfakes de sincronização labial, usando inconsistências temporais entre áudio e vídeo.                                                                                                                         | [GitHub](https://github.com/AaronComo/LipFD)                                                             | Original          |
 | ✅      | [SPSL](https://arxiv.org/abs/2103.01856)                       | Xception                                               | Combina informações espaciais e do espectro de fase para detectar artefatos de up-sampling em imagens forjadas, focando em texturas locais ao reduzir a profundidade da rede para melhorar a detecção de deepfakes.                  | [GitHub](https://github.com/SCLBD/DeepfakeBench/blob/main/training/detectors/spsl_detector.py)           | DeepfakeBenchmark |
 | ✅      | [UCF](https://arxiv.org/abs/2304.13949)                        | Xception                                               | Decompõe a imagem em componentes irrelevantes à falsificação, específicos ao método de falsificação e comuns a várias falsificações, utilizando apenas os componentes comuns para melhorar a generalização na detecção de deepfakes. |  [GitHub](https://github.com/SCLBD/DeepfakeBench/blob/main/training/detectors/ucf_detector.py)           | DeepfakeBenchmark |
@@ -98,8 +128,23 @@ Compilado de informações que podem ser pertinentes para esse projeto.
 | ***WildDeepfake***| 2021 | [paper](https://arxiv.org/abs/2101.01456)                                                                           | [download](https://github.com/deepfakeinthewild/deepfake-in-the-wild)                                             |
 | ***DeepSpeak***   | 2024 | [paper](https://arxiv.org/abs/2408.05366)                                                                           | [download](https://huggingface.co/datasets/faridlab/deepspeak_v1)                                                |
 
+A figura abaixo ilustra os tipos de amostras presentes em alguns dos datasets relevantes na literatura.
+![Datasets](https://imgur.com/0p6sdEH.jpg)
 
 ## Pré-processamento
+
+Os scripts de pré-processamento neste repositório são destinados principalmente para o modelo GenConViT. Para os modelos do Deepfakebenchmark, foi utilizado o pipeline de pré-processamento fornecido pelo próprio benchmark. Os conjuntos de dados utilizados são o ***DeepSpeak e o WildDeepfake***. A pasta `preprocessing/` contém subpastas específicas para cada dataset. Esses scripts garantem que os dados estejam prontos para serem utilizados nos experimentos com o GenConViT.
+
+## Ramificações
+Os códigos do GenConViT e do Deepfake Benchmark foram adaptados para atender às necessidades específicas deste projeto. É possível encontrar os novos repositório em:
+- [GenConViT](https://github.com/MatMB115/GenConViT_Comparative)
+- [DeepfakeBench](https://github.com/MatMB115/DeepfakeBench)
+
+As principais modificações incluem:
+
+- Adição de suporte a novos datasets **(Ambos)**: O pipeline foi ajustado para permitir a integração e o processamento de novos conjuntos de dados, como DeepSpeak e WildDeepfake (apenas para o GenConViT).
+- Implementação de ajustes para predições **(GenConViT)**: modificações para permitir a predição utilizando datasets que contêm apenas imagens pré-processadas.
+- Funcionalidades para salvar dados de predição **(Ambos)**: salvar os dados de predição, permitindo uma análise posterior mais detalhada e organizada.
 
 ## Sobre mim
 

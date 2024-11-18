@@ -1,4 +1,5 @@
 #!/bin/bash
+# Script para dividir os vídeos reais em lotes de 1060 vídeos
 
 source_folder="/run/media/maysuwk/b4918d0e-48e6-4061-a4c3-fa78b840e88c/train/0_real/"
 output_base_folder="/run/media/maysuwk/b4918d0e-48e6-4061-a4c3-fa78b840e88c/train/real_batches"
