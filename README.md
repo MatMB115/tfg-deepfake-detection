@@ -45,10 +45,11 @@ Este repositório é uma fonte central de informações sobre o trabalho desenvo
 
 ## Estrutura do Trabalho
 
-    root/
+    tfg-deepfake-detection/
     ├── .gitignore                
     ├── LICENSE                   
     ├── README.md                 # Documentação do projeto
+    ├── notebooks/                # Notebooks utilizados em VMs para treinamento e teste
     ├── preprocessing/            # Scripts de pré-processamento
     │   ├── deepspeak/            # Scripts específicos para o dataset DeepSpeak
     │   │   ├── create_batches.sh # Script para dividir vídeos em lotes
@@ -179,6 +180,16 @@ Os resultados podem ser expressos com gráficos:
 ![ROC-exemplo](https://imgur.com/PJuFgr3.png)
 Também, podem ser exportados como tabelas:
 ![Tabela-exemplo](https://imgur.com/THlLv6O.png)
+
+Adicionalmente, o benchmark dispõe de monitoramento do treinamento com o Tensorboard. Para visualizar os relatório basta executar:
+
+```bash
+tensorboard --logdir result/logs
+```
+
+Com o tensorboard é possível ver os resultados do treinamento dos modelos presentes no benchmark de forma minuciosa, conforme figura abaixo.
+![Tensorboard](https://imgur.com/aj0eyjq.png)
+
 ## Sobre mim
 
 <table>
