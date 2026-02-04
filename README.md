@@ -21,6 +21,9 @@
 
 Este repositório é uma fonte central de informações sobre o trabalho desenvolvido acerca da comparação de desempenho de novos modelos para **Detecção de Deepfake**. Aqui, você encontrará uma compilação de recursos, incluindo artigos, relatórios, modelos relevantes e scripts de pré-processamento. O objetivo é fornecer uma referência única e acessível aos interessados no trabalho desenvolvido na área de detecção de deepfakes e viabilizar a realização do Trabalho Final de Graduação (TFG) para graduação na Universidade Federal de Itajubá.
 
+Os principais resultados deste trabalho foram sintetizados em formato de artigo científico e publicados nos [anais do SIBGRAPI](https://doi.org/10.1109/SIBGRAPI67909.2025.11223495), ampliando a divulgação das análises comparativas e das contribuições obtidas na detecção de deepfakes.
+- [Full Paper- https://doi.org/10.48550/arXiv.2504.02900](https://doi.org/10.48550/arXiv.2504.02900)
+- [Short Paper SIBGRAPI - https://doi.org/10.1109/SIBGRAPI67909.2025.11223495](https://doi.org/10.1109/SIBGRAPI67909.2025.11223495)
 
 ## Guia das Seções
 - [Análise Comparativa de Modelos para Detecção de Deepfake](#análise-comparativa-de-modelos-para-detecção-de-deepfake)
